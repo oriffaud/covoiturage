@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+#main {
+  margin: 0 auto;
+  position: static;
+}
+
+.box {
+  border-style: solid;
+  float: left;
+  width: 200px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+.selected {
+    background-color: green;
+}
+
+.unselected {
+    background-color: gold;
+}

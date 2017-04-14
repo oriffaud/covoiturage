@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  selected = 'drive';
+
+  drive(): void {
+    this.selected = 'drive';
+  }
+  passenger(): void {
+    this.selected = 'passenger';
+  }
+  donot(): void {
+    this.selected = 'donot';
+  }
 }

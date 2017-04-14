@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<div id="main">
+  <div class="box">
+    <p>Lundi</p>
+  </div>
+  <div class="box" [class.selected]="selected=='drive'" [class.unselected]="selected!='drive'" >
+    <div (click)="drive()" ><p>Conduire</p></div>
+  </div>
+  <div class="box" [class.selected]="selected=='passenger'" [class.unselected]="selected!='passenger'" >
+    <div (click)="passenger()"><p>Passager</p></div>
+  </div>
+  <div class="box" [class.selected]="selected=='donot'" [class.unselected]="selected!='donot'" >
+    <div (click)="donot()"><p>Ne covoiture pas</p></div>
+  </div>
+</div>
