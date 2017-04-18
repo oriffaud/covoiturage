@@ -11,6 +11,11 @@
   margin-bottom: 0;
 }
 
+#container {
+  float: left;
+  height: 100%;
+}
+
 .box {
   margin-top: 0;
   margin-bottom: 0;
@@ -22,13 +27,30 @@
   text-align: center;
 }
 
-
-.selected {
-    background-color: green;
+.left {
+  border-radius: 20px 0px 0px 20px;
+  border: 2px solid #73AD21;
 }
 
-.unselected {
-    background-color: grey;
+.middle {
+  border-radius: 0px 0px 0px 0px;
+  border: 2px solid #73AD21;
+}
+
+.right {
+  border-radius: 0px 20px 20px 0px;
+  border: 2px solid #73AD21;
+}
+
+.selected {
+  background: #73AD21;
+}
+
+.validate {
+  line-height: 200px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: orange;
 }
 
 .img{

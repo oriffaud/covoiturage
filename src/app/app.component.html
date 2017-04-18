@@ -2,24 +2,29 @@
   <div class="box">
     <h2 class="day">Lundi</h2>
   </div>
-  <div class="box" [class.selected]="selected=='drive'" [class.unselected]="selected!='drive'" (click)="drive()">
-    <div><img src="driver.jpg" class="img"/></div>
-    <a *ngIf="driver">
-        <p>{{driver}}</p>
-    </a>
-  </div>
-  <div class="box" [class.selected]="selected=='passenger'" [class.unselected]="selected!='passenger'" (click)="passenger()">
-    <div><h2>Passager</h2>
-      <a *ngFor="let passenger of passengers">
-          <p>{{passenger}}</p>
+  <div id="container" >
+    <div class="box left" [class.selected]="selected=='drive'" (click)="drive()">
+      <div><img src="driver.jpg" class="img"/></div>
+      <a *ngIf="driver">
+          <p>{{driver}}</p>
       </a>
     </div>
-  </div>
-  <div class="box" [class.selected]="selected=='donot'" [class.unselected]="selected!='donot'" (click)="donot()">
-    <div><h2>Ne covoiture pas</h2>
-      <a *ngFor="let donotuser of donotlist">
-          <p>{{donotuser}}</p>
-      </a>
+    <div class="box middle" [class.selected]="selected=='passenger'" (click)="passenger()">
+      <div><h2>Passager</h2>
+        <a *ngFor="let passenger of passengers">
+            <p>{{passenger}}</p>
+        </a>
+      </div>
+    </div>
+    <div class="box right" [class.selected]="selected=='donot'" (click)="donot()">
+      <div><h2>Ne covoiture pas</h2>
+        <a *ngFor="let donotuser of donotlist">
+            <p>{{donotuser}}</p>
+        </a>
+      </div>
+    </div>
+    <div class="box" (click)="validate()">
+      <h2 class="validate">Validate</h2>
     </div>
   </div>
 </div>
